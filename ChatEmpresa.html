@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>melt.chatbot | MELT COOKIE</title>
+
+    <!-- CSS DO CHATBOT -->
+
+    <link rel="stylesheet" href="styleChatBotEmpresa.css">
+
+    <!-- FONTES -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- JAVASCRIPT -->
+
+    <script src="scriptChatEmpresa.js" defer></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- CABEÇALHO -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+             <nav class="navigation" id="navigation">
+
+            MELT <span>COOKIE</span> 🍪
+
+        </a>
+
+
+        <a href="index.html" class="link-voltar">
+
+            ← Voltar para a loja
+
+        </a>
+
+    </header>
+
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main class="container">
+
+
+        <section class="chat-card">
+
+
+            <!-- IDENTIFICAÇÃO DO CHATBOT -->
+
+            <div class="chat-header">
+
+
+                <div class="bot-icon">
+
+                    🍪
+
+                </div>
+
+
+                <div class="bot-info">
+
+                    <h1>melt.chatbot</h1>
+
+                    <p>
+
+                        <span class="status"></span>
+
+                        Assistente virtual MELT COOKIE
+
+                    </p>
+
+                </div>
+
+
+                <span class="model">
+
+                    GPT-4o-mini
+
+                </span>
+
+
+            </div>
+
+
+
+            <!-- MENSAGEM DE BOAS-VINDAS -->
+
+            <div class="welcome">
+
+
+                <div class="welcome-icon">
+
+                    🤎
+
+                </div>
+
+
+                <h2>
+
+                    Olá! Que bom ter você aqui!
+
+                </h2>
+
+
+                <p>
+
+                    Sou o melt.chatbot, seu assistente virtual
+                    da MELT COOKIE!
+
+                    Posso ajudar com dúvidas sobre pedidos,
+                    sugestões de sabores e informações sobre
+                    nossas entregas.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- INFORMAÇÕES DA EMPRESA -->
+
+            <div class="informacoes">
+
+
+                <div class="info-item">
+
+                    <span>🍪</span>
+
+                    <div>
+
+                        <strong>Cookies artesanais</strong>
+
+                        <p>Feitos com carinho e qualidade.</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>📍</span>
+
+                    <div>
+
+                        <strong>Área de entrega</strong>
+
+                        <p>Somente Jundiaí - SP.</p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- CAMPO DA CHAVE API -->
+
+            <div class="campo">
+
+
+                <label for="apiKey">
+
+                    CHAVE DA API OPENAI
+
+                </label>
+
+
+                <input
+
+                    type="password"
+
+                    id="apiKey"
+
+                    placeholder="Cole sua chave da API aqui..."
+
+                    autocomplete="off"
+
+                >
+
+
+                <small>
+
+                    Insira sua chave para conectar
+                    o assistente à inteligência artificial.
+
+                </small>
+
+
+            </div>
+
+
+
+            <!-- CAMPO DA MENSAGEM -->
+
+            <div class="campo">
+
+
+                <label for="mensagem">
+
+                    SUA MENSAGEM
+
+                </label>
+
+
+                <textarea
+
+                    id="mensagem"
+
+                    rows="5"
+
+                    placeholder="Ex.: Quais sabores de cookies vocês recomendam?"
+
+                ></textarea>
+
+
+            </div>
+
+
+
+            <!-- BOTÃO ENVIAR -->
+
+            <button id="btnEnviar" type="button">
+
+
+                <span>
+
+                    ENVIAR MENSAGEM
+
+                </span>
+
+
+                <span class="seta">
+
+                    ➜
+
+                </span>
+
+
+            </button>
+
+
+
+            <!-- CARREGAMENTO -->
+
+            <div id="carregamento" hidden>
+
+
+                <span class="loader"></span>
+
+
+                Preparando uma resposta deliciosa...
+
+
+            </div>
+
+
+
+            <!-- RESPOSTA DO CHATBOT -->
+
+            <div class="resposta-container">
+
+
+                <div class="resposta-titulo">
+
+
+                    <span>✦</span>
+
+
+                    <h3>
+
+                        Resposta do melt.chatbot
+
+                    </h3>
+
+
+                </div>
+
+
+
+                <div id="resposta" aria-live="polite">
+
+
+                    Olá! Estou esperando sua mensagem.
+
+                    Como posso ajudar você hoje? 🍪
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ASSINATURA -->
+
+            <div class="assinatura">
+
+
+                Feito com carinho pela MELT COOKIE 🤎
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- RODAPÉ -->
+
+    <footer class="footer">
+
+
+        <h2>
+
+            MELT <span>COOKIE</span> 🍪
+
+        </h2>
+
+
+        <p>
+
+            Derreta-se por esse sabor!
+
+        </p>
+
+
+        <p>
+
+            Contato: bianca.a.santos13@edu.senai.br
+
+        </p>
+
+
+        <a href="index.html">
+
+            Voltar para a página inicial
+
+        </a>
+
+
+        <div class="copyright">
+
+
+            © 2026 MELT COOKIE.
+            Todos os direitos reservados.
+
+
+        </div>
+
+
+    </footer>
+
+
+
+</body>
+
+</html>

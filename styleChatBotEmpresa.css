@@ -1,0 +1,457 @@
+
+/* =====================================
+   MELT COOKIE - ESTILO DO CHATBOT
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+:root {
+    --marrom: #493126;
+    --marrom-claro: #70503e;
+    --dourado: #bd9654;
+    --dourado-claro: #e0c38d;
+    --bege: #f7f3ec;
+    --branco: #ffffff;
+    --texto: #65564c;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--marrom);
+
+    background:
+        linear-gradient(
+            rgba(54, 35, 25, 0.75),
+            rgba(54, 35, 25, 0.85)
+        ),
+        url("https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=1600")
+        center/cover fixed;
+}
+
+/* CABEÇALHO */
+
+.header {
+    min-height: 75px;
+    padding: 15px 8%;
+    background: #fffdf9;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 3px 15px #0002;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--marrom);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--dourado);
+}
+
+.link-voltar {
+    color: var(--marrom);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.link-voltar:hover {
+    color: var(--dourado);
+}
+
+/* ÁREA PRINCIPAL */
+
+.container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 20px;
+}
+
+/* CARTÃO */
+
+.chat-card {
+    width: 100%;
+    max-width: 700px;
+
+    background: rgba(255, 255, 255, .97);
+
+    padding: 35px;
+
+    border: 1px solid #e6d5b9;
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 60px #0004,
+        0 0 20px #bd965422;
+}
+
+/* CABEÇALHO DO CHAT */
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding-bottom: 23px;
+    border-bottom: 1px solid #eee5da;
+}
+
+.bot-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--marrom);
+    border-radius: 15px;
+
+    font-size: 27px;
+
+    box-shadow: 0 5px 15px #49312625;
+}
+
+.bot-info {
+    flex: 1;
+}
+
+.bot-info h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--marrom);
+}
+
+.bot-info p {
+    font-size: 12px;
+    color: #88786b;
+    margin-top: 5px;
+}
+
+.status {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #58a77c;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.model {
+    background: #f5eee2;
+    color: var(--dourado);
+    padding: 8px 10px;
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* BOAS-VINDAS */
+
+.welcome {
+    background: linear-gradient(
+        135deg,
+        #f9f5ee,
+        #fffaf2
+    );
+
+    border-left: 4px solid var(--dourado);
+    border-radius: 10px;
+
+    padding: 23px;
+    margin: 27px 0;
+}
+
+.welcome-icon {
+    font-size: 25px;
+}
+
+.welcome h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin: 10px 0;
+}
+
+.welcome p {
+    color: var(--texto);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* CAMPOS */
+
+.campo {
+    margin-bottom: 23px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+
+    color: var(--marrom);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+
+    border: 1px solid #ded5c9;
+    border-radius: 8px;
+
+    background: #fdfcf9;
+    color: var(--marrom);
+
+    font-size: 14px;
+    outline: none;
+
+    transition: .3s;
+}
+
+input {
+    height: 50px;
+}
+
+textarea {
+    min-height: 125px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--dourado);
+    box-shadow: 0 0 0 3px #bd965422;
+    background: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #b2a79b;
+}
+
+.campo small {
+    display: block;
+    margin-top: 8px;
+    color: #998b7e;
+    font-size: 11px;
+}
+
+/* BOTÃO */
+
+button {
+    width: 100%;
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    background: linear-gradient(
+        110deg,
+        var(--marrom),
+        #806044
+    );
+
+    color: white;
+    border: none;
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: linear-gradient(
+        110deg,
+        var(--dourado),
+        #98713d
+    );
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px #bd965444;
+}
+
+button:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.seta {
+    font-size: 19px;
+}
+
+/* CARREGAMENTO */
+
+#carregamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 22px;
+
+    color: var(--dourado);
+    font-size: 13px;
+}
+
+#carregamento[hidden] {
+    display: none;
+}
+
+.loader {
+    width: 18px;
+    height: 18px;
+
+    border: 3px solid #e9dfcf;
+    border-top-color: var(--dourado);
+
+    border-radius: 50%;
+
+    animation: girar .8s linear infinite;
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* RESPOSTA */
+
+.resposta-container {
+    margin-top: 28px;
+}
+
+.resposta-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 13px;
+}
+
+.resposta-titulo span {
+    color: var(--dourado);
+    font-size: 23px;
+}
+
+.resposta-titulo h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+}
+
+#resposta {
+    min-height: 115px;
+
+    padding: 20px;
+
+    background: var(--bege);
+    border-left: 4px solid var(--dourado);
+    border-radius: 8px;
+
+    color: var(--texto);
+    font-size: 14px;
+    line-height: 1.8;
+
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* ASSINATURA */
+
+.assinatura {
+    text-align: center;
+    margin-top: 23px;
+
+    color: #998b7e;
+    font-size: 11px;
+    font-style: italic;
+}
+
+/* RODAPÉ */
+
+.footer {
+    padding: 23px;
+    background: var(--marrom);
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+
+.footer a {
+    display: inline-block;
+    margin-top: 10px;
+
+    color: var(--dourado-claro);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .link-voltar {
+        font-size: 11px;
+    }
+
+    .container {
+        padding: 25px 12px;
+    }
+
+    .chat-card {
+        padding: 22px 17px;
+    }
+
+    .bot-info h1 {
+        font-size: 19px;
+    }
+
+    .model {
+        font-size: 8px;
+        padding: 6px;
+    }
+
+    .welcome h2 {
+        font-size: 18px;
+    }
+
+}

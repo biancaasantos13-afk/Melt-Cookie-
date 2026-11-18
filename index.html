@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="MELT COOKIE - Cookies artesanais feitos com carinho e muito chocolate.">
+
+    <title>MELT COOKIE | Cookies Artesanais</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
+        <a href="#inicio" class="logo">
+            MELT <span>COOKIE</span><small>🍪</small>
+        </a>
+
+        <nav class="navigation" id="navigation">
+            <a href="#inicio">Início</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#sobre">Nossa marca</a>
+            <a href="#contato">Contato</a>
+            <a href="ChatEmpresa.html">Chat</a>
+
+        </nav>
+
+        <button class="cart-button" onclick="abrirCarrinho()">
+            🛒 <span id="quantidade">0</span>
+        </button>
+
+        <button class="menu-mobile" onclick="alternarMenu()" aria-label="Abrir menu">
+            ☰
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- BANNER PRINCIPAL -->
+        <section class="hero" id="inicio">
+
+            <div class="hero-text">
+
+                <span class="overline">FEITO ARTESANALMENTE ❤️</span>
+
+                <h1>
+                    Pequenos momentos,
+                    <span>grandes sabores.</span>
+                </h1>
+
+                <p>
+                    Cookies artesanais, macios, recheados e preparados
+                    com muito carinho para deixar seu dia mais doce.
+                </p>
+
+                <a href="#cardapio" class="main-button">
+                    CONHEÇA NOSSO CARDÁPIO →
+                </a>
+
+                <div class="hero-note">
+                    ✨ Derreta-se por esse sabor!
+                </div>
+
+            </div>
+
+            <div class="hero-photo">
+                <img
+                    src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=1100"
+                    alt="Cookies artesanais com gotas de chocolate">
+            </div>
+
+        </section>
+
+
+        <!-- DIFERENCIAIS -->
+        <section class="features">
+
+            <div class="feature">
+                <span>🍪</span>
+                <p>Produção artesanal</p>
+            </div>
+
+            <div class="feature">
+                <span>🤎</span>
+                <p>Ingredientes selecionados</p>
+            </div>
+
+            <div class="feature">
+                <span>✨</span>
+                <p>Sabor especial</p>
+            </div>
+
+        </section>
+
+
+        <!-- CARDÁPIO -->
+        <section class="menu-section" id="cardapio">
+
+            <div class="section-title">
+                <span>NOSSAS DELÍCIAS</span>
+                <h2>Escolha seu cookie favorito</h2>
+                <p>Preparados para conquistar seu coração!</p>
+            </div>
+
+
+            <div class="products">
+
+                <article class="product">
+
+                    <div class="product-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=700"
+                            alt="Cookie com gotas de chocolate">
+                        <span class="product-tag">CLÁSSICO</span>
+                    </div>
+
+                    <div class="product-details">
+                        <h3>Chocolate Chip</h3>
+                        <p>Massa macia com deliciosas gotas de chocolate.</p>
+
+                        <div class="product-footer">
+                            <strong>R$ 9,00</strong>
+                            <button onclick="adicionar('Chocolate Chip', 9)">
+                                + Adicionar
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="product">
+
+                    <div class="product-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=700"
+                            alt="Cookie de chocolate recheado">
+                        <span class="product-tag">MAIS VENDIDO</span>
+                    </div>
+
+                    <div class="product-details">
+                        <h3>Nutella Melt</h3>
+                        <p>Cookie de chocolate com recheio cremoso de Nutella.</p>
+
+                        <div class="product-footer">
+                            <strong>R$ 12,00</strong>
+                            <button onclick="adicionar('Nutella Melt', 12)">
+                                + Adicionar
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="product">
+
+                    <div class="product-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=700"
+                            alt="Cookies artesanais">
+                        <span class="product-tag">ESPECIAL</span>
+                    </div>
+
+                    <div class="product-details">
+                        <h3>Red Velvet</h3>
+                        <p>Cookie red velvet com pedaços de chocolate branco.</p>
+
+                        <div class="product-footer">
+                            <strong>R$ 13,00</strong>
+                            <button onclick="adicionar('Red Velvet', 13)">
+                                + Adicionar
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="product">
+
+                    <div class="product-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1618923850107-d1a234d7a73a?w=700"
+                            alt="Cookie artesanal com chocolate branco">
+                        <span class="product-tag">DELICIOSO</span>
+                    </div>
+
+                    <div class="product-details">
+                        <h3>White Chocolate</h3>
+                        <p>Cookie amanteigado com pedaços de chocolate branco.</p>
+
+                        <div class="product-footer">
+                            <strong>R$ 11,00</strong>
+                            <button onclick="adicionar('White Chocolate', 11)">
+                                + Adicionar
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE A EMPRESA -->
+        <section class="about-section" id="sobre">
+
+            <div class="about-photo">
+                <img
+                    src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=1000"
+                    alt="Cookies artesanais da MELT COOKIE">
+            </div>
+
+            <div class="about-text">
+
+                <span>NOSSA HISTÓRIA</span>
+
+                <h2>Feitos para transformar momentos em doces lembranças.</h2>
+
+                <p>
+                    A MELT COOKIE é uma marca especializada na produção
+                    e venda de cookies artesanais.
+                </p>
+
+                <p>
+                    Nossa paixão é criar sabores especiais utilizando
+                    ingredientes selecionados, criatividade e dedicação.
+                    Queremos tornar cada momento mais gostoso!
+                </p>
+
+                <a href="#cardapio" class="main-button">
+                    EXPERIMENTE NOSSOS COOKIES
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- MISSÃO E VALORES -->
+        <section class="values-section">
+
+            <div class="section-title">
+                <span>O QUE NOS MOVE</span>
+                <h2>Nossa essência</h2>
+            </div>
+
+            <div class="values-grid">
+
+                <div class="value-card">
+                    <span>🎯</span>
+                    <h3>Missão</h3>
+                    <p>
+                        Oferecer cookies saborosos, fresquinhos e de alta
+                        qualidade, proporcionando momentos especiais.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <span>🤎</span>
+                    <h3>Qualidade</h3>
+                    <p>
+                        Utilizar ingredientes selecionados e preparar
+                        cada produto com dedicação.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <span>✨</span>
+                    <h3>Criatividade</h3>
+                    <p>
+                        Desenvolver novos sabores e receitas para
+                        surpreender nossos clientes.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAMADA FINAL -->
+        <section class="final-banner">
+
+            <span>UMA EXPERIÊNCIA MAIS DOCE!</span>
+
+            <h2>Seu próximo cookie favorito espera por você.</h2>
+
+            <a href="#cardapio" class="light-button">
+                ESCOLHER MEUS COOKIES
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer id="contato">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <a href="#inicio" class="logo">
+                    MELT <span>COOKIE</span> 🍪
+                </a>
+
+                <p>Derreta-se por esse sabor!</p>
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Entre em contato</h3>
+
+                <p>
+                    ✉️
+                    <a href="mailto:bianca.a.santos13@edu.senai.br">
+                        bianca.a.santos13@edu.senai.br
+                    </a>
+                </p>
+
+                <p>
+                    📱
+                    <a href="https://wa.me/5511999999999" target="_blank">
+                        (11) 99999-9999
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 MELT COOKIE. Todos os direitos reservados.
+        </div>
+
+    </footer>
+
+
+    <!-- MODAL DO CARRINHO -->
+    <div class="cart-modal" id="carrinho">
+
+        <div class="cart-content">
+
+            <button class="close-button" onclick="fecharCarrinho()">
+                ✕
+            </button>
+
+            <h2>Seu carrinho 🍪</h2>
+
+            <div id="itens-carrinho">
+            </div>
+
+            <div class="cart-total">
+                <span>Total:</span>
+                <strong id="total">R$ 0,00</strong>
+            </div>
+
+            <button class="checkout-button" onclick="finalizarPedido()">
+                FINALIZAR PEDIDO
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
